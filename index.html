@@ -6,14 +6,32 @@
 	<title>TV Shows API</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans|Nunito+Sans:400,700" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 </head>
 <body>
-	<div class="text-center">
+	<div class="text-center title">
 		<h1>TV Shows</h1>
 	</div>
+
+	<!-- Rendered buttons will get dumped here  -->
+    <div id="buttons-view"></div>
+
+	<br>
+
+    <form id="tv-form">
+      <label for="tv-input">Add a TV Show:</label>
+      <input type="text" id="tv-input"><br>
+
+      <!-- Button triggers new TV show to be added -->
+      <input id="add-tv" type="submit" value="Submit">
+    </form>
+
+    <!-- TV Shows will get dumped Here -->
+    <div id="tv-view"></div>
 
 
 

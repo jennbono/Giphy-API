@@ -1,0 +1,51 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	background: url("images/tv-background.png");
+}
+
+.title {
+	font-family: 'Nunito Sans', sans-serif;
+	color: #f06eaa;
+	font-weight: 700;
+}
+
+#tv-input{
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 400;
+	margin: 20px;
+}
+
+#add-tv {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 400;
+	margin: 10px;
+	background-color: #00aeef;
+	color: white;
+	border-radius: 10px;
+}
+
+#tv-form{
+	color: #f06eaa;
+	float: left;
+	margin-top: 50px;
+}
+
+.show {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 400;
+	margin: 10px;
+	background-color: #00aeef;
+	color: white;
+	border-radius: 10px;
+	float: left;
+}
+
+#tv-view {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 400;
+	margin: 10px;
+}
