@@ -67,7 +67,7 @@ renderButtons();
 function displayShowInfo() {
 
         var show = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=" + apiKey + "&limit=10";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=" + apiKey + "&limit=10&rating=pg";
 
         // Creates AJAX call for the specific movie button being clicked
         $.ajax({
@@ -76,7 +76,7 @@ function displayShowInfo() {
         }).done(function(response) {
 
           // Creates a div to hold the TV show
-          $(".tv-view").empty();
+          $("#tv-view").empty();
           // Retrieves the Rating Data
           console.log(response);
 
@@ -96,6 +96,7 @@ function displayShowInfo() {
           		}
           	})
           	var tvShow = $("<span>")
+          	// Retrieves the Rating Data
           	.append("<p>Rating: " + response.data[i].rating + "</p>")
           	.append(tvShowImage);
 
