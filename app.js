@@ -46,10 +46,10 @@ var apiKey = "6dCV6nkmtwc771wwbT7JLFtjMZ4uPYQr"
 renderButtons();
 
 // This function handles events where the add TV Show button is clicked
-      $("#add-show").on("click", function(event) {
+      $("#add-tv").on("click", function(event) {
         event.preventDefault();
         // This line of code will grab the input from the textbox
-        var show = $("#show-input").val().trim();
+        var show = $("#tv-input").val().trim();
 
         // The TV show from the textbox is then added to our array
         shows.push(show);
@@ -80,9 +80,29 @@ function displayShowInfo() {
           // Retrieves the Rating Data
           console.log(response);
 
-          // for (var i = 0; i < show.length; i++) {
-          // 	$("#tv-view").html("<p>Rating: " + response.[].rating + "</p>");
-          // }
+          for (var i = 0; i < response.data.length; i++) {
+          	var tvShowImage = $("<img src= '" + response.data[i].images.original_still.url + "'>")
+          	.attr("data-stillImage", response.data[i].images.original_still.url)
+          	.attr("data-moveImage", response.data[i].images.original.url)
+          	.attr("data-state", "still")
+          	.click(function(){
+          		if ($(this).attr("data-state")=="still") {
+          			$(this).attr("src", $(this).attr("data-moveImage"));
+          			$(this).attr("data-state", "moving");
+          		}
+          		else {
+          			$(this).attr("src", $(this).attr("data-stillImage"));
+          			$(this).attr("data-state", "still");
+          		}
+          	})
+          	var tvShow = $("<span>")
+          	.append("<p>Rating: " + response.data[i].rating + "</p>")
+          	.append(tvShowImage);
+
+          	
+
+          	$("#tv-view").append(tvShow);
+          }
          
         });
 

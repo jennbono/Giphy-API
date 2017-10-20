@@ -11,12 +11,22 @@ body {
 	font-family: 'Nunito Sans', sans-serif;
 	color: #f06eaa;
 	font-weight: 700;
+	font-size: 36px;
+
 }
 
 #tv-input{
 	font-family: 'Fira Sans', sans-serif;
 	font-weight: 400;
-	margin: 20px;
+	font-size: 20px;
+
+}
+
+#add-show {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 400;
+	margin: 10px;
+	font-size: 20px;
 }
 
 #add-tv {
@@ -32,6 +42,8 @@ body {
 	color: #f06eaa;
 	float: left;
 	margin-top: 50px;
+	float: right;
+	margin-right: 15px;
 }
 
 .show {
@@ -48,4 +60,5 @@ body {
 	font-family: 'Fira Sans', sans-serif;
 	font-weight: 400;
 	margin: 10px;
+	font-size: 20px;
 }
