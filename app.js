@@ -67,7 +67,7 @@ renderButtons();
 function displayShowInfo() {
 
         var show = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=" + apiKey + "&limit=10&rating=pg";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=" + apiKey + "&limit=10&rating=pg";
 
         // Creates AJAX call for the specific movie button being clicked
         $.ajax({
