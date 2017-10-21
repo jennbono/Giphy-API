@@ -14,7 +14,7 @@ var shows = ["ALF",
 			 "Saved By the Bell",
 			 "Seinfeld",
 			 "Simpsons",
-			 "The O.C.",
+			 "The OC",
 			 "The Office",
 			 "Toddlers and Tiaras",
 			 "Will and Grace",];
