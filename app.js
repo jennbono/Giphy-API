@@ -69,7 +69,7 @@ function displayShowInfo() {
         var show = $(this).attr("data-name");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=" + apiKey + "&limit=10&rating=pg";
 
-        // Creates AJAX call for the specific movie button being clicked
+        // Creates AJAX call for the specific TV show button being clicked
         $.ajax({
           url: queryURL,
           method: "GET"
@@ -81,9 +81,9 @@ function displayShowInfo() {
           console.log(response);
 
           for (var i = 0; i < response.data.length; i++) {
-          	var tvShowImage = $("<img src= '" + response.data[i].images.original_still.url + "'>")
-          	.attr("data-stillImage", response.data[i].images.original_still.url)
-          	.attr("data-moveImage", response.data[i].images.original.url)
+          	var tvShowImage = $("<img src= '" + response.data[i].images.fixed_width_still.url + "'>")
+          	.attr("data-stillImage", response.data[i].images.fixed_width_still.url)
+          	.attr("data-moveImage", response.data[i].images.fixed_width.url)
           	.attr("data-state", "still")
           	.click(function(){
           		if ($(this).attr("data-state")=="still") {
